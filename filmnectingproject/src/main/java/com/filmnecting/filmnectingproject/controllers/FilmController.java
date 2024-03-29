@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 
 import java.util.List;
+@CrossOrigin(origins = "http://localhost:5173")
 
 @RestController
-@RequestMapping("/films")
+@RequestMapping("/api/films")
 public class FilmController {
     @Autowired
     private FilmService filmService;
@@ -31,10 +32,7 @@ public class FilmController {
         return filmService.getFilmById(id);
     }
 
-    @PutMapping("/{id}")
-    public Film updateFilm(@PathVariable Long id, @RequestBody Film film) {
-        return filmService.updateFilm(id, film);
-    }
+    
 
     @DeleteMapping("/{id}")
     public void deleteFilm(@PathVariable Long id) {

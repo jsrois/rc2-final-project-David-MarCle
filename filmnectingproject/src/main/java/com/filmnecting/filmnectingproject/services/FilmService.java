@@ -13,7 +13,26 @@ import java.util.List;
 public class FilmService {
     @Autowired
     private FilmRepository filmRepository;
+    public Film save(Film film) {
+                return filmRepository.save(film);
+    }
 
-    // Métodos para lógica de negocio
+    public List<Film> getAllFilms() {
+        return filmRepository.findAll();
+    }
+
+    public Film createFilm(Film film) {
+        return filmRepository.save(film);
+    }
+
+    public Film getFilmById(Long id) {
+        return filmRepository.findById(id).orElse(null);
+    }
+
+ 
+
+    public void deleteFilm(Long id) {
+        filmRepository.deleteById(id);
+    }
 }
 
