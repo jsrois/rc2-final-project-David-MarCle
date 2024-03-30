@@ -7,20 +7,21 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Films")
+@Table(name = "films")
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String title;
     private String country;
-    private String year;
-    private String lenght;
+    private Integer year;
+    private Integer lenght;
     private String type;
     private String director;
     private String assistant_director;
     private String production;
     private String executive_production;
+    private String script;
     private String editing;
     private String art_design;
     private String photography;
@@ -35,12 +36,13 @@ public class Film {
     private String url_film;
     private String url_poster;
     private String contact;
+    private String festival_awards;
 
     public Film() {
 
     }
 
-    public Film(Integer id, String title,  String country, String year, String lenght, String type, String director, String assistant_director, String production, String executive_production, String editing, String art_design, String photography, String music, String animation, String sound, String camera, String camera_assistant, String costume_design, String cast, String synopsis, String url_film, String url_poster) {
+    public Film(Integer id, String title,  String country, Integer year, Integer lenght, String type, String director, String assistant_director, String production, String executive_production, String script, String editing, String art_design, String photography, String music, String animation, String sound, String camera, String camera_assistant, String costume_design, String cast, String synopsis, String url_film, String url_poster, String contact, String festival_awards) {
     
    
      
@@ -54,6 +56,7 @@ public class Film {
         this.assistant_director = assistant_director;
         this.production = production;
         this.executive_production = executive_production;
+        this.script = script;
         this.editing = editing;
         this.art_design = art_design;
         this.photography = photography;
@@ -68,6 +71,7 @@ public class Film {
         this.url_film = url_film;
         this.url_poster = url_poster;
         this.contact = contact;
+        this.festival_awards = festival_awards;
 
 
     }
@@ -86,11 +90,11 @@ public class Film {
         return country;
     }
 
-    public String getYear() {
+    public Integer getYear() {
         return year;
     }
 
-    public String getLenght() {
+    public Integer getLenght() {
         return lenght;
     }
 
@@ -112,6 +116,10 @@ public class Film {
 
     public String getExecutive_production() {
         return executive_production;
+    }
+
+    public String getScript() {
+        return script;
     }
 
     public String getEditing() {
@@ -170,6 +178,10 @@ public class Film {
         return contact;
     }
 
+    public String getFestival_awards() {
+        return festival_awards;
+    }
+
     public void setId(Integer id) {
         this.id = id;
     }
@@ -182,11 +194,11 @@ public class Film {
         this.country = country;
     }
 
-    public void setYear(String year) {
+    public void setYear(Integer year) {
         this.year = year;
     }
 
-    public void setLenght(String lenght) {
+    public void setLenght(Integer lenght) {
         this.lenght = lenght;
     }
 
@@ -208,6 +220,10 @@ public class Film {
 
     public void setExecutive_production(String executive_production) {
         this.executive_production = executive_production;
+    }
+
+    public void setScript(String script) {
+        this.script = script;
     }
 
     public void setEditing(String editing) {
@@ -264,6 +280,10 @@ public class Film {
 
     public void setContact(String contact) {
         this.contact = contact;
+    }
+
+    public void setFestival_awards(String festival_awards) {
+        this.festival_awards = festival_awards;
     }
 }
 
