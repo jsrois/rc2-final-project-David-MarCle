@@ -1,0 +1,55 @@
+.searchFilm{
+width: 100%;
+height: 30rem;
+/*background-image:url(../../assets/fondo.jpg) ;
+background-repeat: none;
+background-size: cover;*/
+
+position: relative;
+}
+
+.searchFilm__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    position: absolute;
+    z-index: 2;
+    height: 100%;
+    width: 100%;    
+}
+.searchFilm__title{
+    color: black;
+    font-size: 3rem;
+    
+    padding: 1rem;
+    border-radius: .6rem;
+    background-color:rgba(246, 245, 245, 0.5); 
+
+}
+.searchFilm__text{
+    color: white;
+    font-size: 2rem;
+    
+}
+.searchFilm__inputContainer{
+    display: flex;
+    gap: 1rem;
+}
+.searchFilm__input{
+width: 40rem;
+padding-left: 2rem;
+
+border-radius: .5rem;
+border: none;
+}
+.searchFilm__button{
+    border:.2rem solid var(--btn-color);
+    background-color: var( --glow-spread-color);
+    color:white;
+    border-radius: .5rem;
+    width: 10rem;
+    padding: .6rem;
+    font-size: 2rem;
+    cursor: pointer;
+}

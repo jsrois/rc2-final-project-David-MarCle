@@ -1,8 +1,6 @@
 
 import "./App.css";
-import { CardCta } from "./presentation/components/cardCta/CardCta";
-import { Header } from "./presentation/components/header/Header";
-import { Hero } from "./presentation/components/hero/Hero";
+import { AppRouter } from './middleware/router/AppRouter';
 
 
 
@@ -12,9 +10,7 @@ function App() {
   return (
     <>
     
-    <Header/>
-    <Hero/> 
-    <CardCta/>
+    <AppRouter />
     </>
      
        

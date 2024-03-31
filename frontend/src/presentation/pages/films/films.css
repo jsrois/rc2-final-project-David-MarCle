@@ -1,0 +1,55 @@
+body{
+    background-image:url(../../assets/fondo.jpg) ;
+    background-repeat: none;
+background-size: cover;
+height: 300vh;
+
+}
+.filmContainer{
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem
+    ;
+}
+.filmContainer__section--1 {
+    display: grid;
+    
+    grid-template-columns: 1fr 2fr repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: .9rem;
+    grid-row-gap: 0px;
+    
+    
+   
+    width: 90%;
+    height: 30rem;
+    }
+    .filmContainer__section--2 {
+        display: grid;
+        
+        grid-template-columns: 2fr 1fr repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: .9rem;
+        grid-row-gap: 0px;
+        
+        width: 90%;
+        height: 30rem;
+        }
+    .filmContainer div{
+
+        background-color:rgba(237, 230, 230, 0.7); 
+        border-radius: .7rem;
+    }
+    .filmContainer div:hover{
+        scale: 1.1;
+    }
+    .div__film{
+       width: 100%;
+       height: 100%;
+        
+        
+    }
+    
