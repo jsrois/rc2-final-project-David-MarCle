@@ -1,0 +1,81 @@
+main{
+    
+    background: black;
+    height: 100vh;
+}
+.mainContainer{
+    display: flex;
+    justify-content: center;
+    margin: 4rem;
+    
+}
+.mainContainer__section{
+    margin-top: 6%;
+    margin-left: 8rem;
+	width:20rem; 
+  height: 55rem; 
+  padding: 2rem; 
+  color: white;
+  border-radius: 2rem;
+ 
+
+}
+.mainContainer__section--title{
+    font-size: 2.5rem;
+    text-align: center;
+}
+.mainContainer__section--p1{
+    color: white;
+    text-align: center;
+}
+.mainContainer__section--contButton{
+    width: 20rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+    
+}
+
+  
+.mainContainer__section:hover {
+    padding: 1em 3em;
+    color: var(--glow-color);
+    font-size: 15px;
+    font-weight: bold;
+    background: rgb(44,43,49);
+    background: linear-gradient(180deg, black 53%, #b20027 90%);
+    border-radius: 1em;
+    outline: none;    
+    text-shadow: 0 0 .5em var(--glow-color);
+    position: relative;
+    transition: all 0.3s;
+    scale: 1.1;
+}
+
+
+  
+.mainContainer__section p{
+    
+    font-size: 1.5rem;
+}
+.mainContainer__section--img{
+    width: 20rem;
+    height: 15rem;
+}
+.mainContainer__section button {
+    
+    border: .25em solid var(--glow-color);
+    padding: 1em 3em;
+    color: var(--white);
+    font-size: 15px;
+    font-weight: bold;
+    background-color: var(--btn-color);
+    border-radius: 1em;
+    outline: none;
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 1em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    text-shadow: 0 0 .5em var(black);
+    position: relative;
+    transition: all 0.3s;
+   }
