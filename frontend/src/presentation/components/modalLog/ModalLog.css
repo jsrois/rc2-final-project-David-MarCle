@@ -1,7 +1,7 @@
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 99;
     left: 0;
     top: 0;
     width: 100%;
@@ -19,12 +19,13 @@
     background-color: #242222;
     border-radius: .7rem;
     color: white;
-    margin: 15rem auto;
+    margin: 10rem auto;
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid red;
     width: 30rem; /* Ajusta el ancho del modal según tu preferencia */
     max-width: 60rem;
-    height: 40rem; /* Ajusta el ancho máximo del modal según tu preferencia */
+    max-height: 50rem; /* Ajusta el ancho máximo del modal según tu preferencia */
+    
   }
   
   .close {
@@ -53,5 +54,8 @@
     gap: 2rem;
     align-items: center;
 
+  }
+  .modal input{
+    border-radius: .4rem;
   }
   

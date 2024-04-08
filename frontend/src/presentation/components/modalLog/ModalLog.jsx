@@ -1,18 +1,29 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import "./ModalLog.css";
 
-const ModalLog = ({ isOpen, onClose }) => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [registerEmail, setRegisterEmail] = useState('');
-  const [registerPassword, setRegisterPassword] = useState('');
+const ModalLogin = ({ isOpen, onClose }) => {
+  const [log, setLog] = useState({
+    email: '',
+    password: ''
+  });
+  const [register, setRegister] = useState({
+    email: '',
+    password: '',
+    name: '',
+    lastName: '',
+    phone: ''
+  });
 
   const [isRegistering, setIsRegistering] = useState(false);
 
-  const handleEmailChange = (e) => setEmail(e.target.value);
-  const handlePasswordChange = (e) => setPassword(e.target.value);
-  const handleRegisterEmailChange = (e) => setRegisterEmail(e.target.value);
-  const handleRegisterPasswordChange = (e) => setRegisterPassword(e.target.value);
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (isRegistering) {
+      setRegister({ ...register, [name]: value });
+    } else {
+      setLog({ ...log, [name]: value });
+    }
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -27,44 +38,51 @@ const ModalLog = ({ isOpen, onClose }) => {
     <div className={`modal ${isOpen ? 'show' : ''}`}>
       <div className="modal-content">
         <span className="close" onClick={onClose}>X</span>
-        <h2> Iniciar sesión</h2>
+        <h2>Iniciar sesión</h2>
         <form className='Form' onSubmit={handleSubmit}>
           <label>
             Correo electrónico:
-            <input type="email" value={email} onChange={handleEmailChange} required={!isRegistering} />
+            <input type="email" name="email" value={log.email} onChange={handleInputChange} required />
           </label>
           <label>
             Contraseña:
-            <input type="password" value={password} onChange={handlePasswordChange} required={!isRegistering} />
+            <input type="password" name="password" value={log.password} onChange={handleInputChange} required />
           </label>
+          <button type="submit">Iniciar sesión</button>
+          <p>¿No tienes una cuenta? <button type="button" onClick={() => setIsRegistering(true)}>Regístrate</button></p>
+        </form>
 
-          {/* Botones de inicio de sesión y registro */}
-          <div className="button-container">
-            <button type="button" onClick={() => setIsRegistering(false)}>Iniciar sesión</button>
-            <span>or</span>
-            <button type="button" onClick={() => setIsRegistering(true)}>Registrarse</button>
-          </div>
-
-          {/* Inputs adicionales para el registro */}
-          {isRegistering && (
-            <>
+        {isRegistering && (
+          <div>
+            <h2>Registrarse</h2>
+            <form className='Form' onSubmit={handleSubmit}>
               <label>
-                Correo electrónico (registro):
-                <input type="email" value={registerEmail} onChange={handleRegisterEmailChange} required={isRegistering} />
+                Nombre:
+                <input type="text" name="name" value={register.name} onChange={handleInputChange} required />
               </label>
               <label>
-                Contraseña (registro):
-                <input type="password" value={registerPassword} onChange={handleRegisterPasswordChange} required={isRegistering} />
+                Apellidos:
+                <input type="text" name="lastName" value={register.lastName} onChange={handleInputChange} required />
+              </label>
+              <label>
+                Teléfono:
+                <input type="text" name="phone" value={register.phone} onChange={handleInputChange} required />
+              </label>
+              <label>
+                Correo electrónico:
+                <input type="email" name="email" value={register.email} onChange={handleInputChange} required />
+              </label>
+              <label>
+                Contraseña:
+                <input type="password" name="password" value={register.password} onChange={handleInputChange} required />
               </label>
               <button type="submit">Registrarse</button>
-            </>
-          )}
-
-          
-        </form>
+            </form>
+          </div>
+        )}
       </div>
     </div>
   );
 };
 
-export default ModalLog;
+export default ModalLogin;
