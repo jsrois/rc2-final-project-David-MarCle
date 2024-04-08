@@ -1,0 +1,43 @@
+/* carrouselFilm.css */
+
+/* Estilos para la descripción */
+.dd {
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
+    color: red; /* Color del texto */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid white;
+    border-radius: 10px; /* Borde redondeado */
+    width: 20rem;
+    height: 20rem;
+  }
+  
+  /* Estilos para el título */
+  .dd h2 {
+    font-size: 24px; /* Tamaño de fuente */
+    margin-bottom: 10px; /* Espaciado inferior */
+  }
+  
+  /* Estilos para los párrafos */
+  .dd p {
+    margin-bottom: 5px; /* Espaciado inferior */
+  }
+ 
+    
+    
+  
+  .image-gallery-icon{
+    display: none;
+    
+  }
+  
+    
+  .image-gallery-slide.image-gallery-center {
+    position: relative;
+    height: 55rem;
+    width: 60rem;
+}
+.image-gallery-description{
+   display
+}
+  
+  
