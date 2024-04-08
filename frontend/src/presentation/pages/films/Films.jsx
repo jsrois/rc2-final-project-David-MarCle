@@ -1,6 +1,6 @@
 
-import { Header } from '../../components/header/Header'
-import { SearchFilm } from '../../components/searchFilm/SearchFilm'
+import  Header  from '../../components/header/Header';
+
 
 import "./films.css"
 import CarrouselFilm  from '../../components/carrouselFilm/CarrouselFilm';
