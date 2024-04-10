@@ -9,16 +9,12 @@
 
 html {
   font-size: 62.5%;
+
 }
 body {
   margin: 0 auto;
-  background-color: var(--main-bg);
-}
-button:hover {
-    color: var(--white);
-    background-color: var(--glow-color);
-    box-shadow: 0 0 1em .25em black,
-           0 0 4em 2em var(--glow-spread-color),
+  background: rgb(0,0,0);
+  background: linear-gradient(171deg, rgba(0,0,0,1) 64%, rgba(178,0,39,1) 90%, rgba(255,14,67,1) 100%);           0 0 4em 2em var(--glow-spread-color),
            inset 0 0 .75em .25em var(--glow-color);
    }
    

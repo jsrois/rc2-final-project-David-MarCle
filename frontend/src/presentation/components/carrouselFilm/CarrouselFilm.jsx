@@ -37,7 +37,7 @@ const CarrouselFilm = () => {
   return (
     <div className="carrousel-container">
       <div className="filter-container">
-        <button onClick={() => handleFilterType("Comedy")}>Comedia</button>
+        <button className='filter-containerButton' onClick={() => handleFilterType("Comedy")}>Comedia</button>
         <button onClick={() => handleFilterType("Horror")}>Horror</button>
         <button onClick={() => handleFilterType("Adventure")}>Aventura</button>
         <button onClick={() => handleFilterType("Drama")}>Drama</button>
@@ -50,27 +50,27 @@ const CarrouselFilm = () => {
 
       <div className="carrousel-content" ref={thumbnailContainerRef}>
         <div className="row">
-          {currentItem && currentItem.url_poster && (
-            <div className="column">
+          <div className="column">
+            {currentItem && currentItem.url_poster && (
               <img
                 src={currentItem.url_poster}
                 alt={currentItem.title}
                 className="poster-image"
               />
-            </div>
-          )}
+            )}
+          </div>
           <div className="column">
             <div className="description">
               {currentItem && (
                 <>
-                  <h2>{currentItem.title}</h2>
-                  <p>{currentItem.country}</p>
-                  <p>{currentItem.year}</p>
-                  <p>{currentItem.length}</p>
-                  <p>{Array.isArray(currentItem.type) ? currentItem.type.join(', ') : currentItem.type}</p>
-                  <p>{currentItem.director}</p>
-                  <p>{currentItem.cast}</p>
-                  <p>{currentItem.camera}</p>
+                  <h2>Título:  {currentItem.title}</h2>
+                  <p>País:  {currentItem.country}</p>
+                  <p>Año:  {currentItem.year}</p>
+                  <p>Duración:  {currentItem.length}</p>
+                  <p>Género:  {Array.isArray(currentItem.type) ? currentItem.type.join(', ') : currentItem.type}</p>
+                  <p>Director:  {currentItem.director}</p>
+                  <p>Actores:  {currentItem.cast}</p>
+                  <p>Cámara:  {currentItem.camera}</p>
                 </>
               )}
             </div>
@@ -85,7 +85,7 @@ const CarrouselFilm = () => {
               className={`thumbnail ${index === currentIndex ? 'active' : ''}`}
               onClick={() => {
                 setCurrentIndex(index);
-                scrollPageToTop(); // Llamar a la función para desplazar la página hacia arriba
+                scrollPageToTop();
               }}
             />
           ))}
@@ -96,3 +96,4 @@ const CarrouselFilm = () => {
 };
 
 export default CarrouselFilm;
+
