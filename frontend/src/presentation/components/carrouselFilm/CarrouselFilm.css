@@ -1,43 +1,72 @@
-/* carrouselFilm.css */
+.carrousel-container {
+  max-width: 100%; /* Ancho máximo del carrusel */
+  margin: 0 auto; /* Centra el carrusel */
+  position: relative;
+}
 
-/* Estilos para la descripción */
-.dd {
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo semitransparente */
-    color: red; /* Color del texto */
-    padding: 10px; /* Espaciado interno */
-    border: 1px solid white;
-    border-radius: 10px; /* Borde redondeado */
-    width: 20rem;
-    height: 20rem;
-  }
-  
-  /* Estilos para el título */
-  .dd h2 {
-    font-size: 24px; /* Tamaño de fuente */
-    margin-bottom: 10px; /* Espaciado inferior */
-  }
-  
-  /* Estilos para los párrafos */
-  .dd p {
-    margin-bottom: 5px; /* Espaciado inferior */
-  }
+.carrousel-wrapper {
  
-    
-    
-  
-  .image-gallery-icon{
-    display: none;
-    
-  }
-  
-    
-  .image-gallery-slide.image-gallery-center {
-    position: relative;
-    height: 55rem;
-    width: 60rem;
+  display: flex;
+  border: .3rem solid red;
+  width: 40rem;
+  height:60rem;
+  justify-content: center;
 }
-.image-gallery-description{
-   display
+.filter_container{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  
 }
+
+
+
+.description {
   
-  
+  margin-top: 10px;
+  color: white;
+}
+
+.thumbnail-container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px; /* Distribuye las miniaturas equitativamente */
+  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  margin-top: 10px;
+  padding: 0 20px;
+}
+
+.thumbnail {
+ width: 10rem; 
+  height: 15rem;/* Ancho máximo de las miniaturas */
+   /* Altura automática */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: opacity 0.3s ease; /* Transición suave al cambiar la opacidad */
+}
+
+.thumbnail:hover {
+  opacity: 0.7; /* Reduce la opacidad al pasar el mouse sobre las miniaturas */
+}
+
+.thumbnail.active {
+  border: 2px solid red; /* Resalta la miniatura activa */
+}
+.carrousel-container button{
+  border: .1rem solid var(--glow-color);
+  padding: 1rem 3rem;
+  color: var(--white);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: transparent;
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 .1em .1em var(--glow-color),
+         0 0 .1em .1em var(--glow-spread-color),
+         inset 0 0 .1em .1em var(--glow-color);
+  text-shadow: 0 0 .5em var(black);
+  position: relative;
+  transition: all 0.3s;
+  cursor: pointer;
+}

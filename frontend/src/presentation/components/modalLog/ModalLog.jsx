@@ -28,10 +28,9 @@ const ModalLogin = ({ isOpen, onClose }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (isRegistering) {
-      // Aquí puedes implementar la lógica para el registro
+      console.log(register);
     } else {
-      // Aquí puedes implementar la lógica para iniciar sesión
-    }
+      /*Lógica*/ }
   };
 
   return (
