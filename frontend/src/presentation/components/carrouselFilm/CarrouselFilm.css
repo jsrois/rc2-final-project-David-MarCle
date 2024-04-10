@@ -1,6 +1,6 @@
 .carrousel-container {
-  max-width: 100%; /* Ancho máximo del carrusel */
-  margin: 0 auto; /* Centra el carrusel */
+  max-width: 100%; 
+  margin: 0 auto; 
   position: relative;
 }
 
@@ -13,8 +13,10 @@
   justify-content: center;
 }
 .filter_container{
+  width: 100%;
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
   
 }
@@ -32,26 +34,25 @@
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 0px;
-  grid-row-gap: 0px; /* Distribuye las miniaturas equitativamente */
-  overflow-x: auto; /* Habilita el desplazamiento horizontal */
+  grid-row-gap: 0px; 
+  overflow-x: auto; 
   margin-top: 10px;
   padding: 0 20px;
 }
 
 .thumbnail {
  width: 10rem; 
-  height: 15rem;/* Ancho máximo de las miniaturas */
-   /* Altura automática */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  transition: opacity 0.3s ease; /* Transición suave al cambiar la opacidad */
+  height: 15rem;
+  cursor: pointer; 
+  transition: opacity 0.3s ease; 
 }
 
 .thumbnail:hover {
-  opacity: 0.7; /* Reduce la opacidad al pasar el mouse sobre las miniaturas */
+  opacity: 0.7; 
 }
 
 .thumbnail.active {
-  border: 2px solid red; /* Resalta la miniatura activa */
+  border: 2px solid red; 
 }
 .carrousel-container button{
   border: .1rem solid var(--glow-color);
