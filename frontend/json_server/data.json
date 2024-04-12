@@ -263,7 +263,7 @@
             },
             {
               "id": 11,
-              "title": "El Tesoro Perdido",
+              "title": "El Tesoro",
               "country": "Spain",
               "year": 2019,
               "length": "21 minutes",
@@ -284,7 +284,7 @@
               "cast": ["Javier Ruiz", "María Pérez", "Carlos García"],
               "synopsis": "Un grupo de amigos se embarca en una búsqueda para encontrar un tesoro perdido en una isla remota.",
               "url_film": "https://www.ejemplo.com/el-tesoro-perdido",
-              "url_poster": "../../../../public/img/el-viaje.jpg",
+              "url_poster": "../../../../public/img/El-tesoro.jpg",
               "contact": "info@cineespana.com"
             },
             {
@@ -362,7 +362,7 @@
               "cast": ["Javier Pérez", "Elena Martín", "Carlos García"],
               "synopsis": "Un inventor construye una máquina del tiempo y se enfrenta a las consecuencias de su creación.",
               "url_film": "https://www.ejemplo.com/la-maquina-del-tiempo",
-              "url_poster": "../../../../public/img/el-viaje.jpg",
+              "url_poster": "../../../../public/img/La-maquina-del-tiempo.jpg",
               "contact": "info@cortosespana.com"
             },
             {
