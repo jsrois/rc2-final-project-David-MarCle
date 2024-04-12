@@ -154,7 +154,7 @@
               "cast": ["María García", "Carlos Pérez", "Sara López"],
               "synopsis": "Dos desconocidos se encuentran en una cita a ciegas con resultados cómicos inesperados.",
               "url_film": "https://www.ejemplo.com/la-cita",
-              "url_poster": "../../../../public/img/La-cita.jpg",
+              "url_poster": "../../../../public/img/La-cita.png",
               "contact": "info@cortosespana.com"
             },
             {
@@ -185,7 +185,7 @@
             },
             {
               "id": 8,
-              "title": "El Viaje del Gato",
+              "title": "El Gatito",
               "country": "Spain",
               "year": 2017,
               "length": "19 minutes",
@@ -206,7 +206,7 @@
               "cast": ["N/A"],
               "synopsis": "Un gato emprende un viaje fantástico por el mundo en busca de su hogar.",
               "url_film": "https://www.ejemplo.com/el-viaje-del-gato",
-              "url_poster": "../../../../public/img/el-viaje.jpg",
+              "url_poster": "../../../../public/img/El_gatito.jpg",
               "contact": "info@cortosespana.com"
             },
             {
@@ -232,7 +232,7 @@
               "cast": ["Sofía Pérez", "Andrés Martínez", "Lucas García"],
               "synopsis": "Un hombre intenta escapar de su pasado oscuro pero descubre que hay fuerzas que no lo dejarán ir tan fácilmente.",
               "url_film": "https://www.ejemplo.com/el-escapista",
-              "url_poster": "../../../../public/img/el-viaje.jpg",
+              "url_poster": "../../../../public/img/El-escapista.jpg",
               "contact": "info@cineespana.com"
             },
             {
@@ -393,7 +393,7 @@
             },
             {
               "id": 16,
-              "title": "La Isla de los Recuerdos",
+              "title": "La Isla Rota",
               "country": "Spain",
               "year": 2021,
               "length": "16 minutes",
@@ -413,8 +413,8 @@
               "costume_design": "Andrés Ruiz",
               "cast": ["Carlos Pérez", "Sara Martínez", "Javier Ruiz"],
               "synopsis": "Una mujer visita una isla remota donde revive recuerdos de su pasado y enfrenta sus demonios internos.",
-              "url_film": "https://www.ejemplo.com/la-isla-de-los-recuerdos",
-              "url_poster": "../../../../public/img/laisla.jpg",
+              "url_film": "https://www.ejemplo.com/La-isla-rota.jpg",
+              "url_poster": "../../../../public/img/La-isla-rota.jpg",
               "contact": "info@cortosespana.com"
             },
             {
