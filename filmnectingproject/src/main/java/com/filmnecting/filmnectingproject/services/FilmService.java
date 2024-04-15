@@ -1,7 +1,6 @@
 package com.filmnecting.filmnectingproject.services;
 
 
-
 import com.filmnecting.filmnectingproject.models.Film;
 import com.filmnecting.filmnectingproject.repository.FilmRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +12,9 @@ import java.util.List;
 public class FilmService {
     @Autowired
     private FilmRepository filmRepository;
+
     public Film save(Film film) {
-                return filmRepository.save(film);
+        return filmRepository.save(film);
     }
 
     public List<Film> getAllFilms() {
@@ -29,7 +29,6 @@ public class FilmService {
         return filmRepository.findById(id).orElse(null);
     }
 
- 
 
     public void deleteFilm(Long id) {
         filmRepository.deleteById(id);

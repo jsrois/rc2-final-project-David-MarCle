@@ -1,19 +1,16 @@
 package com.filmnecting.filmnectingproject.models;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "films")
 public class Film {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
     private String title;
     private String country;
+    @Column(name="release_year")
     private Integer year;
     private Integer lenght;
     private String type;
@@ -31,7 +28,7 @@ public class Film {
     private String camera;
     private String camera_assistant;
     private String costume_design;
-    private String cast;
+    private String casting;
     private String synopsis;
     private String url_film;
     private String url_poster;
@@ -42,10 +39,8 @@ public class Film {
 
     }
 
-    public Film(Integer id, String title,  String country, Integer year, Integer lenght, String type, String director, String assistant_director, String production, String executive_production, String script, String editing, String art_design, String photography, String music, String animation, String sound, String camera, String camera_assistant, String costume_design, String cast, String synopsis, String url_film, String url_poster, String contact, String festival_awards) {
-    
-   
-     
+    public Film(Long id, String title,  String country, Integer year, Integer lenght, String type, String director, String assistant_director, String production, String executive_production, String script, String editing, String art_design, String photography, String music, String animation, String sound, String camera, String camera_assistant, String costume_design, String cast, String synopsis, String url_film, String url_poster, String contact, String festival_awards) {
+
         this.id = id;
         this.title = title;
         this.country = country; 
@@ -66,7 +61,7 @@ public class Film {
         this.camera = camera;
         this.camera_assistant = camera_assistant;
         this.costume_design = costume_design;
-        this.cast = cast;
+        this.casting = cast;
         this.synopsis = synopsis;
         this.url_film = url_film;
         this.url_poster = url_poster;
@@ -76,7 +71,7 @@ public class Film {
 
     }
   
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
     
@@ -158,8 +153,8 @@ public class Film {
         return costume_design;
     }
 
-    public String getCast() {
-        return cast;
+    public String getCasting() {
+        return casting;
     }
 
     public String getSynopsis() {
@@ -182,7 +177,7 @@ public class Film {
         return festival_awards;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -262,8 +257,8 @@ public class Film {
         this.costume_design = costume_design;
     }
 
-    public void setCast(String cast) {
-        this.cast = cast;
+    public void setCasting(String casting) {
+        this.casting = casting;
     }
 
     public void setSynopsis(String synopsis) {
